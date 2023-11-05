@@ -111,11 +111,15 @@ bot();
 document.getElementById('chatbot_toggle').onclick = function () {
   if (document.getElementById('chatbot').classList.contains('collapsed')) {
     document.getElementById('chatbot').classList.remove('collapsed');
+    document.getElementById('chatbot').classList.add('main-card');
+    document.getElementById('message-box').style.display = 'flex';
     document.getElementById('chatbot_toggle').children[0].style.display =
       'none';
     document.getElementById('chatbot_toggle').children[1].style.display = '';
   } else {
     document.getElementById('chatbot').classList.add('collapsed');
+    document.getElementById('chatbot').classList.remove('main-card');
+    document.getElementById('message-box').style.display = 'none';
     document.getElementById('chatbot_toggle').children[0].style.display = '';
     document.getElementById('chatbot_toggle').children[1].style.display =
       'none';

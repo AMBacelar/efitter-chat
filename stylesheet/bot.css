@@ -158,6 +158,15 @@ header img {
     margin: 16px!important;
 }
 
+.wrapper {
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+.untoggled-button {
+    height: 100%;
+    width: 100%;
+}
 .main-card {
     background: white;
     color: white;
@@ -167,9 +176,7 @@ header img {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    right: 0;
-    bottom: 0;
-    position: fixed;
+    
     transition: all 0.5s;
     box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -180,7 +187,8 @@ header img {
     border: none;
     height: 48px;
     width: 48px;
-    background: #fed8e2;
+    padding: 0;
+    background: transparent;
     color:white;
     transition: all 0.1s ease;
 }
@@ -228,6 +236,7 @@ header img {
     display: flex;
     flex-direction: column;
     background: #fff;
+    margin-top: 40px;
 }
 .input-message {
     padding: 8px 48px 8px 16px;
