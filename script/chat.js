@@ -22,7 +22,7 @@ const chat = {
     next: 7,
   },
   4: {
-    text: '{{material}}',
+    text: '{{materials}}',
     options: [
       {
         text: 'Great!',
@@ -30,7 +30,7 @@ const chat = {
       },
       {
         text: 'Which size is best for me?',
-        next: 7,
+        next: 3,
       },
     ],
   },
@@ -50,7 +50,7 @@ const chat = {
         next: 9,
       },
       {
-        text: "Hmm I'm not sure",
+        text: "Hmm I'm not sure...",
         next: 10,
       },
     ],

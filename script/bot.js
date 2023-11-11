@@ -1,5 +1,11 @@
 // bot fonctionnement
 const bot = function () {
+  const chatVariables = {
+    size: 'XS',
+    materials:
+      'Acrylic is lightweight, soft, and warm - similar to wool but it is machine washable.',
+  };
+
   const efitterChat = document.getElementById('efitter-chat');
   const container = document.getElementById('efitter-chat-container');
   const inner = document.getElementById('efitter-chat-inner');
@@ -22,7 +28,7 @@ const bot = function () {
   const printResponse = async function (step) {
     const response = document.createElement('div');
     response.classList.add('chat-response');
-    response.innerHTML = step.text;
+    response.innerHTML = mustache.render(step.text, chatVariables);
     insertNewChatItem(response);
     // TODO: create a loading phase
     await sleep(1500);
