@@ -25,9 +25,23 @@ const bot = function () {
     elem.classList.add('activated');
   };
 
+  const showLoading = function () {
+    const loading = document.createElement('div');
+    loading.classList.add('loading');
+    loading.classList.add('chat-response');
+    loading.classList.add('chat-response');
+    loading.innerHTML = '<div class="dot-flashing"></div>';
+    insertNewChatItem(loading);
+  };
+  const hideLoading = function () {
+    const loading = document.querySelector('.loading');
+    if (loading) {
+      loading.remove();
+    }
+  };
+
   const printResponse = async function (step) {
     const response = document.createElement('div');
-    // TODO: create option for image
     if (step.image) {
       response.classList.add('chat-image');
       response.innerHTML = `<img src="${step.image}" width="100%" alt="${step.text}">`;
@@ -37,7 +51,9 @@ const bot = function () {
     }
     insertNewChatItem(response);
     // TODO: create a loading phase
+    showLoading();
     await sleep(1500);
+    hideLoading();
 
     if (step.options) {
       const choices = document.createElement('div');
@@ -96,7 +112,9 @@ const bot = function () {
     printChoice(choice);
     scrollContainer();
 
+    showLoading();
     await sleep(1500);
+    hideLoading();
 
     if (choice.dataset.next) {
       printResponse(chat[choice.dataset.next]);
