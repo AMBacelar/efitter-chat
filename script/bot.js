@@ -42,6 +42,7 @@ const bot = function () {
     if (step.options) {
       const choices = document.createElement('div');
       choices.classList.add('choices');
+      choices.innerHTML = '<div class="choice-text">CHOOSE AN OPTION</div>';
       step.options.forEach(function (option) {
         const button = document.createElement(option.url ? 'a' : 'button');
         button.classList.add('choice');
@@ -67,6 +68,10 @@ const bot = function () {
   };
 
   const disableAllChoices = function () {
+    const choiceTexts = document.querySelectorAll('.choice-text');
+    choiceTexts.forEach(function (choiceText) {
+      choiceText.classList.add('choice-text-disabled');
+    });
     const choices = document.querySelectorAll('.choice');
     choices.forEach(function (choice) {
       choice.disabled = 'disabled';
