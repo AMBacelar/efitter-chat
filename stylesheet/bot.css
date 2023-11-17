@@ -350,10 +350,9 @@ header img {
     max-height: 160px;
     border-radius: 0.75rem 0.75rem 0.75rem 0.125rem;
     margin-bottom: 0.5rem;
-    margin-left: 26px;
+    margin-left: 45px;
     overflow: hidden;
 }
-
 .chat-response,
 .chat-ask {
     opacity: 0;
@@ -370,17 +369,19 @@ header img {
 .chat-response {
     color: rgb(113, 46, 73);
     background-color: rgb(255, 235, 239);
-    margin-left: 26px;
+    margin-left: 45px;
     position: relative;
 }
+.chat-image:before,
 .chat-response:before {
     display: block;
     content: '';
-    width: 24px;
-    height: 24px;
+    width: 35px;
+    height: 35px;
     position: absolute;
-    left: -26px;
-    top: 6px;
+    left: -45px;
+    bottom: 0;
+    background: url('https://storage.googleapis.com/media.landbot.io/159487/channels/ES9MZRY60PPC1E6W4RJDCHQ47ZPAXQSR.png');
     background-repeat: no-repeat;
     background-size: 100%;
     border-radius: 100%;
@@ -399,7 +400,6 @@ header img {
     transition: all 0.3s 0.3s;
     transition: opacity 0.3s 0.3s;
     margin-top: 0.5rem;
-    margin-left: 22px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
