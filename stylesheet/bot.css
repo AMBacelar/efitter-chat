@@ -345,6 +345,15 @@ header img {
     display: none;
 }
 
+.chat-image {
+    max-width: 200px;
+    max-height: 160px;
+    border-radius: 0.75rem 0.75rem 0.75rem 0.125rem;
+    margin-bottom: 0.5rem;
+    margin-left: 26px;
+    overflow: hidden;
+}
+
 .chat-response,
 .chat-ask {
     opacity: 0;
@@ -354,7 +363,7 @@ header img {
     background-color: rgb(113, 46, 73);
     padding: 1rem 1.5rem;
     line-height: 1.4;
-    color: #fff;
+    color: rgb(255, 235, 239);
     width: 80%;
     margin-bottom: 0.5rem;
 }
@@ -384,7 +393,7 @@ header img {
     color: rgb(113, 46, 73);
 }
 .choices {
-    color: #fff;
+    color: rgb(255, 235, 239);
     opacity: 0;
     transform: translateY(-50%);
     transition: all 0.3s 0.3s;
@@ -447,5 +456,3 @@ header img {
     color: white;
     background-color: rgb(121,70,90);
 }
-
-/* END CSS du chatbot */

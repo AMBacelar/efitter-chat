@@ -27,8 +27,14 @@ const bot = function () {
 
   const printResponse = async function (step) {
     const response = document.createElement('div');
-    response.classList.add('chat-response');
-    response.innerHTML = mustache.render(step.text, chatVariables);
+    // TODO: create option for image
+    if (step.image) {
+      response.classList.add('chat-image');
+      response.innerHTML = `<img src="${step.image}" width="100%" alt="${step.text}">`;
+    } else {
+      response.classList.add('chat-response');
+      response.innerHTML = mustache.render(step.text, chatVariables);
+    }
     insertNewChatItem(response);
     // TODO: create a loading phase
     await sleep(1500);

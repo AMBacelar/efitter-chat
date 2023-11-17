@@ -2,6 +2,11 @@
 const chat = {
   1: {
     text: "Hey! 👋  I'm efitter. I'm here to help you shop 😁",
+    next: 6,
+  },
+  6: {
+    image: 'img/hey.gif',
+    text: 'Hey!',
     next: 2,
   },
   2: {
@@ -37,7 +42,6 @@ const chat = {
   5: {
     text: "Fab! Don't forget to add your item to your basket 💃",
   },
-  6: {},
   7: {
     text: 'Size {{size}} should fit you fine!',
     next: 8,
