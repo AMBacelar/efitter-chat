@@ -454,8 +454,8 @@ header img {
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background-color: #9880ff;
-  color: #9880ff;
+  background-color: rgb(113, 46, 73);
+  color: rgb(113, 46, 73);
   animation: dot-flashing 1s infinite linear alternate;
   animation-delay: 0.5s;
 }
@@ -471,8 +471,8 @@ header img {
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background-color: #9880ff;
-  color: #9880ff;
+  background-color: rgb(113, 46, 73);
+  color: rgb(113, 46, 73);
   animation: dot-flashing 1s infinite alternate;
   animation-delay: 0s;
 }
@@ -481,19 +481,19 @@ header img {
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background-color: #9880ff;
-  color: #9880ff;
+  background-color: rgb(113, 46, 73);
+  color: rgb(113, 46, 73);
   animation: dot-flashing 1s infinite alternate;
   animation-delay: 1s;
 }
 
 @keyframes dot-flashing {
   0% {
-    background-color: #9880ff;
+    background-color: rgb(113, 46, 73);
   }
   50%,
   100% {
-    background-color: rgba(152, 128, 255, 0.2);
+    background-color: rgba(113, 46, 73, 0.2);
   }
 }
 
